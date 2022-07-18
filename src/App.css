@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+@import url(./static/reset.css);
+
+body {
+  color: rgb(226, 220, 220);
+  background-color: #335;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[class $= 'inner'] {
+  margin: auto;
+  width: 1200px;
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* #header {} 현제는 헤더 쓸일이 없지만 알아보기 쉽게 */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#header .header-inner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid;
 }
-
-.App-link {
-  color: #61dafb;
+#header h1 {
+  text-shadow: 5px 5px 5px rgb(226, 220, 220,0.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#header .gnb {
+  font-size: 20px;  
+}
+#header .gnb ul {
+  display: flex;
+}
+#header .gnb ul li:not(:last-child) {
+  margin-right: 20px;
 }
