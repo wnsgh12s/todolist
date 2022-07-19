@@ -13,7 +13,7 @@ body {
 
 /* #header {} 현제는 헤더 쓸일이 없지만 알아보기 쉽게 */
 
-#header .header-inner {
+#header .header_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,3 +31,29 @@ body {
 #header .gnb ul li:not(:last-child) {
   margin-right: 20px;
 }
+
+#main {}
+#main .main_inner {
+  position: relative;
+}
+#main .today {
+  margin-bottom: 30px;
+}
+#main .today span {
+  font-size: medium;
+}
+#main .todo_list {
+  margin-bottom: 20px;
+}
+#main .todo_list ul {
+  
+}
+#main .todo_list ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid;
+}
+
+#main .write_btn {
+  font-size: 30px;
+  
+}  
