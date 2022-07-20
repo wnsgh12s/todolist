@@ -32,10 +32,8 @@ body {
   margin-right: 20px;
 }
 
-#main {}
-#main .main_inner {
-  position: relative;
-}
+/* #main {} */
+/* #main .main_inner {} */
 #main .today {
   margin-bottom: 30px;
 }
@@ -45,15 +43,12 @@ body {
 #main .todo_list {
   margin-bottom: 20px;
 }
-#main .todo_list ul {
-  
-}
 #main .todo_list ul li {
   padding: 10px 0;
   border-bottom: 1px solid;
 }
 
 #main .write_btn {
-  font-size: 30px;
-  
+  font-size: 20px;
+  margin-left: 10px;
 }  
