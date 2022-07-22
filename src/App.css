@@ -31,6 +31,9 @@ body {
 #header .gnb ul li:not(:last-child) {
   margin-right: 20px;
 }
+#header .gnb ul li a:hover {
+  color: #fff;
+}
 
 /* #main {} */
 /* #main .main_inner {} */
@@ -52,3 +55,4 @@ body {
   font-size: 20px;
   margin-left: 10px;
 }  
+
