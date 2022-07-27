@@ -64,6 +64,7 @@ body {
 
 
 #main .calender {
+  margin-bottom: 30px;
 }
 #main .calender ul { 
  
@@ -72,15 +73,21 @@ body {
   text-align: center;
   float: left;
   width: 14.28571%;
-  padding: 20px 0 20px 0;
   border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   cursor: pointer;
 }
 #main .calender ul li:hover {
   background-color: #F7D020;
   color: #335;
 }
+#main .calender ul li a {
+  display: block;
+  padding: 20px 0 20px 0;
+}
 #main .calender ul .active {
   background-color: #F7D020;
   color: #335;
 }
+
+#main .tomorrow_list {}
