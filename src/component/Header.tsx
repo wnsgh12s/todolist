@@ -8,7 +8,7 @@ function Header(){
           <nav className="gnb">
             <ul>
               <li><Link to={'/'}> 오늘 할일</Link></li>
-              <li><Link to={'/tomorrow'}> 내일 할일</Link></li>
+              <li><Link to={'/tomorrow'}> 다음 할일</Link></li>
             </ul>
           </nav>
         </div>
