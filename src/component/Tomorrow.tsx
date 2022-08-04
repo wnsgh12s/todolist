@@ -9,25 +9,27 @@ interface TodayProps {
   today_year :number;
   days :string[]
 }
-function Tomorrow({today,today_date,today_day,today_month,today_year,days}:TodayProps){
-  let [active,set_active] = useState(today_day)
-  let {id} = useParams()
-  function changeActive(e:React.MouseEvent<HTMLLIElement,MouseEvent>,i:number){
-    set_active(i)
-  }
 
-  let [tomorrow_list,set_tommorrow_list] = useState(['1번','2번','3번','4번','5번','6번','7번'])
+function Tomorrow({today,today_date,today_day,today_month,today_year,days}:TodayProps){
+  let {id} = useParams()
+  let [tomorrow_list,set_tommorrow_list] = useState(['몸만들기'])
+  let last_day = [31,29,31,30,31,30,31,31,30,31,30,31]
   return(
-    <main id="main">
+    <main id="main">  
       <div className="main_inner">
         <h2>{today_year}년 {today_month}월 {today_date}일 {days[today_day]}</h2>
+        <button>왼쪽</button>
+        <button>오른쪾</button>
         <div className="calender">
-          <ul className="day clear">
+          <ul className="day clear">  
             {days?.map((e,i)=>{
+              let minus = today_day -i
+              let day = today_day - minus <= 0 ? 31 : today_day - minus
+              let month = today_day-minus <= 0 ? today_month - 1 : today_month
+              let year = month <= 0 ? today_year-1 : today_year 
               return(
-                <li className={active === i ? 'active' : ''} onClick={(e)=>{
-                  changeActive(e,i)
-                }}> <Link to={`/tomorrow/${i}`}>{e}</Link></li>
+                <li className={ id && parseInt(id) === i ? 'active' : ''} onClick={(e)=>{
+                }}> <Link to={`/tomorrow/${i}`}>{e} <br />{year}-{month}-{day}</Link></li>     
               )
             })}
           </ul>
@@ -36,6 +38,7 @@ function Tomorrow({today,today_date,today_day,today_month,today_year,days}:Today
             <ul>
               <li>{id && tomorrow_list[parseInt(id)]}</li>
             </ul>
+            <input className="tmr_input" type="text" /><button className="write_btn">+</button>
           </div>
       </div>
     </main>

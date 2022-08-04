@@ -90,4 +90,10 @@ body {
   color: #335;
 }
 
-#main .tomorrow_list {}
+#main .tomorrow_list {
+  margin-bottom: 20px
+}
+
+#main .tomorrow_list ul{
+  margin-bottom: 15px;
+}

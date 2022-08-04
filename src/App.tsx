@@ -23,8 +23,21 @@ function App() {
     <div className="App">
       <Header today_day={today_day}/>
       <Routes>
-        <Route path='/' element={<Main today={today} today_date = {today_date} today_day = {today_day} today_month = {today_month} today_year = {today_year} days={days} />}></Route>
-        <Route path='/tomorrow/:id' element={<Tomorrow today={today} today_date = {today_date} today_day = {today_day} today_month = {today_month} today_year = {today_year} days={days}/>}></Route>
+        <Route path='/' element={<Main 
+        today={today} 
+        today_date = {today_date} 
+        today_day = {today_day} 
+        today_month = {today_month} 
+        today_year = {today_year} 
+        days={days} 
+        />}></Route>
+        <Route path='/tomorrow/:id' element={<Tomorrow 
+        today={today}
+        today_date = {today_date} 
+        today_day = {today_day} 
+        today_month = {today_month} 
+        today_year = {today_year} 
+        days={days}/>}></Route>
       </Routes>
     </div>  
   );  
